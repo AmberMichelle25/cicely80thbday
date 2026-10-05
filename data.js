@@ -13,12 +13,14 @@ const partyInfo = {
     address: "2227 W Park Row Dr, Pantego, TX 76013",
     phone: "(817) 801-9992",
     website: "https://whiteroomtexas.com",
+    image: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1000&q=80",
     mapUrl: "https://www.google.com/maps/search/?api=1&query=The+White+Room+2227+W+Park+Row+Dr+Pantego+TX+76013",
     description: "An intimate and exquisite Tuscan-style reception ballroom featuring glowing chandeliers, warm candlelight, a spacious dance floor, and premier catering."
   },
   familyHub: {
     name: "Cicely's House (Family Gathering Hub)",
     address: "222 Quail Trail Lane, Arlington, TX 76002",
+    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1000&q=80",
     mapUrl: "https://www.google.com/maps/search/?api=1&query=222+Quail+Trail+Lane+Arlington+TX+76002",
     description: "The primary hospitality and welcome home base for out-of-town family and friends arriving in Arlington."
   },
@@ -28,6 +30,7 @@ const partyInfo = {
       time: "6:00 PM – 9:00 PM",
       title: "Family Welcome & Meet & Greet",
       location: "Cicely's House • 222 Quail Trail Lane",
+      image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80",
       notes: "Casual gathering, welcome cocktails, Texas refreshments, and catching up as out-of-town guests arrive."
     },
     {
@@ -35,6 +38,7 @@ const partyInfo = {
       time: "6:30 PM – 10:30 PM",
       title: "Cicely's 80th Birthday Celebration",
       location: "The White Room • 2227 W Park Row Dr, Pantego, TX",
+      image: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80",
       notes: "Dinner, dancing, champagne toasts, tribute speeches, and celebrating Cicely. Attire: Dress to Impress in ALL BLACK."
     },
     {
@@ -42,6 +46,7 @@ const partyInfo = {
       time: "10:30 AM – 1:30 PM",
       title: "Farewell Family Brunch & Photos",
       location: "Cicely's House / Recommended Local Brunch",
+      image: "https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?auto=format&fit=crop&w=800&q=80",
       notes: "Hug Cicely goodbye, enjoy coffee and breakfast treats, and capture group family photos before departing."
     }
   ]
@@ -51,6 +56,7 @@ const airportRoutes = [
   {
     airportCode: "DFW",
     airportName: "Dallas/Fort Worth International Airport",
+    image: "https://images.unsplash.com/photo-1530521954074-e64f6810b32d?auto=format&fit=crop&w=1000&q=80",
     approxSummary: "Approximately 20–25 minutes away",
     airportSubtitle: "Primary international airport hub serving all major airlines",
     destinations: [
@@ -79,6 +85,7 @@ const airportRoutes = [
   {
     airportCode: "DAL",
     airportName: "Dallas Love Field Airport",
+    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1000&q=80",
     approxSummary: "Approximately 35–40 minutes away",
     airportSubtitle: "Southwest Airlines primary hub closer to downtown Dallas",
     destinations: [
@@ -618,6 +625,7 @@ const entertainmentList = [
     category: "Theme & Water Parks",
     name: "Six Flags Over Texas",
     ages: "All Ages",
+    image: "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?auto=format&fit=crop&w=800&q=80",
     phone: "817-640-8900",
     address: "2201 Road to Six Flags, Arlington, TX 76011",
     website: "https://www.sixflags.com/overtexas",
@@ -627,6 +635,7 @@ const entertainmentList = [
     category: "Sports Stadiums & Tours",
     name: "AT&T Stadium / Dallas Cowboys",
     ages: "All Ages",
+    image: "https://images.unsplash.com/photo-1577223625816-7546f13df25d?auto=format&fit=crop&w=800&q=80",
     phone: "817-892-4626",
     address: "One AT&T Way, Arlington, TX 76011",
     website: "https://attstadium.com/tours/",
@@ -636,6 +645,7 @@ const entertainmentList = [
     category: "Sports Stadiums & Tours",
     name: "Globe Life Field / Texas Rangers",
     ages: "All Ages",
+    image: "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=800&q=80",
     phone: "817-533-1833",
     address: "734 Stadium Dr, Arlington, TX 76011",
     website: "https://www.mlb.com/rangers/ballpark/tours",
@@ -645,6 +655,7 @@ const entertainmentList = [
     category: "Museums & Culture",
     name: "National Medal of Honor Museum",
     ages: "All Ages",
+    image: "https://images.unsplash.com/photo-1566127444979-b3d2b654e3d7?auto=format&fit=crop&w=800&q=80",
     phone: "817-274-1861",
     address: "1861 AT&T Way, Arlington, TX 76011",
     website: "https://mohmuseum.org/",
@@ -654,6 +665,7 @@ const entertainmentList = [
     category: "Nature & Parks",
     name: "River Legacy Living Science Center & Parks",
     ages: "All Ages",
+    image: "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80",
     phone: "817-860-6752",
     address: "703 NW Green Oaks Blvd, Arlington, TX 76006",
     website: "https://riverlegacy.org/",
@@ -663,6 +675,7 @@ const entertainmentList = [
     category: "Science & Space",
     name: "UTA Planetarium & Observatory",
     ages: "All Ages",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
     phone: "817-272-2011",
     address: "701 S Nedderman Dr, Arlington, TX 76019",
     website: "https://www.uta.edu/planetarium/",
@@ -672,6 +685,7 @@ const entertainmentList = [
     category: "Indoor Fun & Arcades",
     name: "Alley Cats Entertainment",
     ages: "All Ages",
+    image: "https://images.unsplash.com/photo-1511882150382-421056c89033?auto=format&fit=crop&w=800&q=80",
     phone: "817-784-2695",
     address: "2008 W Pleasant Ridge Rd, Arlington, TX 76015",
     website: "https://alleycatsarcade.com/",
@@ -681,6 +695,7 @@ const entertainmentList = [
     category: "Indoor Fun & Arcades",
     name: "Round1 Bowling & Arcade (The Parks Mall)",
     ages: "All Ages",
+    image: "https://images.unsplash.com/photo-1538370965046-79c0d6907d47?auto=format&fit=crop&w=800&q=80",
     phone: "817-855-4941",
     address: "3811 S Cooper St Ste 6004, Arlington, TX 76015",
     website: "https://www.round1usa.com/",
@@ -690,6 +705,7 @@ const entertainmentList = [
     category: "Indoor Fun & Arcades",
     name: "Cidercade Arlington",
     ages: "All Ages during daytime",
+    image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80",
     phone: "682-206-3918",
     address: "500 E Division St, Arlington, TX 76011",
     website: "https://www.cidercade.com/arlington/",

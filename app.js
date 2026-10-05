@@ -138,10 +138,10 @@ function renderLodging() {
     const isSpecial = hotel.specialRecognition !== "Recommended";
     
     return `
-      <div class="luxury-card p-5 sm:p-6 flex flex-col justify-between ${hotel.overallPick ? 'border-gold-500/50 shadow-lg shadow-gold-500/10' : ''}">
+      <div class="luxury-card p-5 sm:p-6 flex flex-col justify-between ${hotel.overallPick ? 'border-cranberry-500/60 shadow-lg shadow-cranberry-900/30' : ''}">
         <div>
           <div class="flex items-start justify-between gap-2 mb-3">
-            <span class="${isSpecial ? 'badge-gold' : 'badge-dark'} text-[10px]">
+            <span class="${hotel.overallPick || hotel.luxuryPick ? 'badge-cranberry' : (isSpecial ? 'badge-gold' : 'badge-dark')} text-[10px]">
               ${hotel.specialRecognition}
             </span>
             <span class="text-xs font-bold text-emerald-400 bg-emerald-950/40 border border-emerald-500/20 px-2.5 py-0.5 rounded-full shrink-0">
@@ -153,7 +153,7 @@ function renderLodging() {
           
           <div class="space-y-1.5 text-xs text-slate-300 mb-3.5">
             <div class="flex items-start gap-2">
-              <i data-lucide="map-pin" class="w-4 h-4 text-gold-400 shrink-0 mt-0.5"></i>
+              <i data-lucide="map-pin" class="w-4 h-4 text-cranberry-400 shrink-0 mt-0.5"></i>
               <span class="leading-snug">${hotel.address}</span>
             </div>
             <div class="flex items-center gap-2">
@@ -298,7 +298,7 @@ function renderRestaurants() {
         <div>
           <!-- Tags Header -->
           <div class="flex items-center justify-between gap-2 mb-2.5">
-            <span class="badge-gold text-[10px]">${r.city} • ${r.meal}</span>
+            <span class="badge-cranberry text-[10px]">${r.city} • ${r.meal}</span>
             <span class="text-[11px] font-semibold text-emerald-400 bg-emerald-950/40 border border-emerald-500/20 px-2 py-0.5 rounded-full shrink-0">
               4: ${r.estFor4}
             </span>
@@ -377,39 +377,54 @@ function renderActivities() {
   grid.innerHTML = siteData.entertainmentList.map(act => {
     const mapQuery = encodeURIComponent(`${act.name} ${act.address}`);
     return `
-      <div class="luxury-card p-5 sm:p-6 flex flex-col justify-between">
-        <div>
-          <div class="flex items-start justify-between gap-2 mb-2">
-            <span class="badge-gold text-[10px]">${act.category}</span>
-            <span class="text-[10px] text-slate-400 bg-white/5 px-2 py-0.5 rounded">${act.ages}</span>
-          </div>
-
-          <h3 class="font-serif text-base sm:text-lg font-bold text-white mb-2 leading-snug">${act.name}</h3>
-          
-          <p class="text-xs text-slate-400 mb-3.5 leading-relaxed">${act.notes}</p>
-
-          <div class="space-y-1.5 text-xs text-slate-300 mb-4">
-            <div class="flex items-start gap-2">
-              <i data-lucide="map-pin" class="w-3.5 h-3.5 text-gold-400 shrink-0 mt-0.5"></i>
-              <span class="truncate">${act.address}</span>
+      <div class="luxury-card flex flex-col justify-between overflow-hidden">
+        ${act.image ? `
+          <div class="card-img-header">
+            <img src="${act.image}" alt="${act.name}" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <div class="absolute top-3 left-3 right-3 flex items-center justify-between z-10">
+              <span class="badge-cranberry text-[10px]">${act.category}</span>
+              <span class="text-[10px] text-gold-300 font-semibold bg-black/60 px-2 py-0.5 rounded-full border border-white/10">${act.ages}</span>
             </div>
-            ${act.phone ? `
-              <div class="flex items-center gap-2">
-                <i data-lucide="phone" class="w-3.5 h-3.5 text-gold-400 shrink-0"></i>
-                <a href="tel:${act.phone.replace(/[^0-9]/g, '')}" class="hover:text-gold-400 font-medium">${act.phone}</a>
+          </div>
+        ` : ''}
+
+        <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
+          <div>
+            ${!act.image ? `
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <span class="badge-cranberry text-[10px]">${act.category}</span>
+                <span class="text-[10px] text-slate-400 bg-white/5 px-2 py-0.5 rounded">${act.ages}</span>
               </div>
             ` : ''}
-          </div>
-        </div>
 
-        <div class="pt-3 border-t border-white/10 flex items-center justify-between gap-2">
-          <a href="https://www.google.com/maps/search/?api=1&query=${mapQuery}" target="_blank" rel="noopener" class="btn-ghost text-xs py-1.5 px-3 flex-1 justify-center">
-            <i data-lucide="navigation" class="w-3 h-3"></i> Map
-          </a>
-          <a href="${act.website}" target="_blank" rel="noopener" class="btn-gold text-xs py-1.5 px-3 flex-1 justify-center">
-            <span>Tickets</span>
-            <i data-lucide="external-link" class="w-3 h-3"></i>
-          </a>
+            <h3 class="font-serif text-base sm:text-lg font-bold text-white mb-2 leading-snug">${act.name}</h3>
+            
+            <p class="text-xs text-slate-400 mb-3.5 leading-relaxed">${act.notes}</p>
+
+            <div class="space-y-1.5 text-xs text-slate-300 mb-4">
+              <div class="flex items-start gap-2">
+                <i data-lucide="map-pin" class="w-3.5 h-3.5 text-cranberry-400 shrink-0 mt-0.5"></i>
+                <span class="truncate">${act.address}</span>
+              </div>
+              ${act.phone ? `
+                <div class="flex items-center gap-2">
+                  <i data-lucide="phone" class="w-3.5 h-3.5 text-gold-400 shrink-0"></i>
+                  <a href="tel:${act.phone.replace(/[^0-9]/g, '')}" class="hover:text-gold-400 font-medium">${act.phone}</a>
+                </div>
+              ` : ''}
+            </div>
+          </div>
+
+          <div class="pt-3 border-t border-white/10 flex items-center justify-between gap-2">
+            <a href="https://www.google.com/maps/search/?api=1&query=${mapQuery}" target="_blank" rel="noopener" class="btn-ghost text-xs py-1.5 px-3 flex-1 justify-center">
+              <i data-lucide="navigation" class="w-3 h-3"></i> Map
+            </a>
+            <a href="${act.website}" target="_blank" rel="noopener" class="btn-gold text-xs py-1.5 px-3 flex-1 justify-center">
+              <span>Tickets / Info</span>
+              <i data-lucide="external-link" class="w-3 h-3"></i>
+            </a>
+          </div>
         </div>
       </div>
     `;

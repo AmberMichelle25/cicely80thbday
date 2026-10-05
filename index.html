@@ -40,11 +40,20 @@
               600: '#aa820a',
               700: '#856303'
             },
+            cranberry: {
+              300: '#f2849e',
+              400: '#e03163',
+              500: '#b9375e',
+              600: '#8b1e3f',
+              700: '#5c0e25',
+              800: '#3b0a18',
+              900: '#23040e'
+            },
             dark: {
-              900: '#090a0f',
-              800: '#12141c',
-              700: '#1c1f2a',
-              600: '#252a3a'
+              900: '#0a0608',
+              800: '#150d11',
+              700: '#1f1218',
+              600: '#291620'
             }
           }
         }
@@ -52,22 +61,22 @@
     }
   </script>
 </head>
-<body class="bg-[#090a0f] text-slate-100 antialiased selection:bg-gold-500 selection:text-black">
+<body class="bg-[#0a0608] text-slate-100 antialiased selection:bg-cranberry-600 selection:text-white">
 
-  <!-- Top Announcement Bar -->
-  <div class="bg-gradient-to-r from-black via-zinc-900 to-black border-b border-gold-500/20 py-2.5 px-4 text-center text-xs sm:text-sm text-gold-300 font-medium tracking-wider flex items-center justify-center gap-2">
+  <!-- Top Announcement Bar with Cranberry/Gold styling -->
+  <div class="bg-gradient-to-r from-cranberry-900 via-cranberry-800 to-cranberry-900 border-b border-cranberry-500/30 py-2.5 px-4 text-center text-xs sm:text-sm text-gold-300 font-medium tracking-wider flex items-center justify-center gap-2 shadow-lg">
     <i data-lucide="sparkles" class="w-4 h-4 text-gold-400 shrink-0"></i>
-    <span class="truncate">ATTIRE: <strong>DRESS TO IMPRESS IN ALL BLACK</strong> • OCT 10, 2026</span>
+    <span class="truncate">ATTIRE: <strong class="text-white">DRESS TO IMPRESS IN ALL BLACK</strong> • OCT 10, 2026</span>
     <i data-lucide="sparkles" class="w-4 h-4 text-gold-400 shrink-0"></i>
   </div>
 
   <!-- Hero Section -->
-  <header class="relative pt-10 pb-12 sm:pt-16 sm:pb-20 md:pt-20 md:pb-24 overflow-hidden border-b border-gold-500/15">
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(212,175,55,0.15),rgba(9,10,15,0))] pointer-events-none"></div>
+  <header class="relative pt-10 pb-12 sm:pt-16 sm:pb-20 md:pt-20 md:pb-24 overflow-hidden border-b border-cranberry-500/20">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(185,55,94,0.22),rgba(10,6,8,0))] pointer-events-none"></div>
     <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 text-center">
       
-      <!-- Crown / Badge -->
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-gold-300 text-xs sm:text-sm uppercase tracking-widest font-semibold mb-6 shadow-lg shadow-gold-500/5">
+      <!-- Crown / Badge with Cranberry & Gold -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-cranberry-500/40 bg-cranberry-900/60 text-gold-300 text-xs sm:text-sm uppercase tracking-widest font-semibold mb-6 shadow-lg shadow-cranberry-900/40">
         <i data-lucide="crown" class="w-4 h-4 text-gold-400"></i>
         <span>Milestone 80th Birthday Celebration</span>
       </div>
@@ -174,8 +183,19 @@
   </header>
 
   <!-- Sticky Tab Navigation Bar -->
-  <nav class="sticky top-0 z-40 bg-[#090a0f]/95 backdrop-blur-md border-b border-gold-500/20 py-2.5 shadow-xl">
+  <nav class="sticky top-0 z-40 bg-[#0a0608]/95 backdrop-blur-md border-b border-cranberry-500/25 py-2.5 shadow-xl shadow-black/60">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <!-- Mobile Swipe Prompt for Tabs -->
+      <div class="flex items-center justify-between md:hidden text-[11px] text-cranberry-300 pb-1.5 px-1 font-medium">
+        <span class="flex items-center gap-1.5">
+          <i data-lucide="hand" class="w-3.5 h-3.5 text-cranberry-400"></i>
+          <span>Swipe tabs horizontally</span>
+        </span>
+        <span class="text-[10px] text-gold-400/80 flex items-center gap-0.5">
+          <span>Scroll</span> <i data-lucide="arrow-right" class="w-3 h-3"></i>
+        </span>
+      </div>
+
       <div class="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0 scrollbar-none justify-start md:justify-center touch-pan-x" id="navTabs">
         <button class="nav-tab-btn active" data-tab="party" onclick="openTab('party')">
           <i data-lucide="party-popper" class="w-4 h-4"></i>
@@ -224,199 +244,251 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
         
         <!-- Venue Card: The White Room -->
-        <div class="luxury-card p-6 sm:p-8 flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between gap-4 mb-4">
-              <span class="badge-gold">Main Venue</span>
-              <a href="https://whiteroomtexas.com" target="_blank" rel="noopener" class="text-xs text-gold-400 hover:text-gold-300 underline flex items-center gap-1">
-                whiteroomtexas.com <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-              </a>
+        <div class="luxury-card flex flex-col justify-between overflow-hidden">
+          <div class="card-img-header">
+            <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1000&q=80" alt="The White Room Elegant Ballroom" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between z-10">
+              <span class="badge-cranberry">Main Venue Ballroom</span>
+              <span class="badge-gold text-[10px]"><i data-lucide="sparkles" class="w-3 h-3 inline mr-1"></i> Tuscan Style</span>
             </div>
-            
-            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-3">The White Room</h3>
-            
-            <div class="space-y-2.5 text-slate-300 text-xs sm:text-sm mb-6">
-              <div class="flex items-start gap-3">
-                <i data-lucide="map-pin" class="w-5 h-5 text-gold-400 shrink-0 mt-0.5"></i>
-                <div>
-                  <div class="font-medium text-white">2227 W Park Row Dr</div>
-                  <div class="text-slate-400">Pantego, TX 76013</div>
-                </div>
-              </div>
-              <div class="flex items-center gap-3">
-                <i data-lucide="phone" class="w-5 h-5 text-gold-400 shrink-0"></i>
-                <a href="tel:8178019992" class="hover:text-gold-400 transition font-medium">(817) 801-9992</a>
-              </div>
-              <div class="flex items-center gap-3">
-                <i data-lucide="calendar" class="w-5 h-5 text-gold-400 shrink-0"></i>
-                <span>Saturday, October 10th, 2026</span>
-              </div>
-              <div class="flex items-center gap-3">
-                <i data-lucide="clock" class="w-5 h-5 text-gold-400 shrink-0"></i>
-                <span>Event Time: <strong class="text-gold-300">6:30 PM – 10:30 PM</strong></span>
-              </div>
+            <div class="absolute bottom-3 left-4 z-10">
+              <span class="text-xs text-gold-300 font-semibold tracking-wider uppercase">Pantego, TX</span>
             </div>
-
-            <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">
-              An intimate and exquisite Tuscan-style reception ballroom featuring glowing chandeliers, warm candlelight, a spacious dance floor, and premier catering for our grand celebration.
-            </p>
           </div>
 
-          <div class="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-            <a href="https://www.google.com/maps/search/?api=1&query=The+White+Room+2227+W+Park+Row+Dr+Pantego+TX+76013" target="_blank" rel="noopener" class="btn-gold text-xs sm:text-sm">
-              <i data-lucide="navigation" class="w-4 h-4"></i>
-              <span>Google Maps to The White Room</span>
-            </a>
-            <a href="https://whiteroomtexas.com" target="_blank" rel="noopener" class="btn-outline-gold text-xs sm:text-sm">
-              <i data-lucide="globe" class="w-4 h-4"></i>
-              <span>Venue Website</span>
-            </a>
+          <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-4 mb-3">
+                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white">The White Room</h3>
+                <a href="https://whiteroomtexas.com" target="_blank" rel="noopener" class="text-xs text-gold-400 hover:text-gold-300 underline flex items-center gap-1 shrink-0">
+                  whiteroomtexas.com <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                </a>
+              </div>
+              
+              <div class="space-y-2 text-slate-300 text-xs sm:text-sm mb-5">
+                <div class="flex items-start gap-2.5">
+                  <i data-lucide="map-pin" class="w-4 h-4 text-cranberry-400 shrink-0 mt-0.5"></i>
+                  <div>
+                    <div class="font-medium text-white">2227 W Park Row Dr</div>
+                    <div class="text-slate-400">Pantego, TX 76013</div>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <i data-lucide="phone" class="w-4 h-4 text-gold-400 shrink-0"></i>
+                  <a href="tel:8178019992" class="hover:text-gold-400 transition font-medium">(817) 801-9992</a>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <i data-lucide="calendar" class="w-4 h-4 text-gold-400 shrink-0"></i>
+                  <span>Saturday, October 10th, 2026</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <i data-lucide="clock" class="w-4 h-4 text-cranberry-400 shrink-0"></i>
+                  <span>Event Time: <strong class="text-gold-300">6:30 PM – 10:30 PM</strong></span>
+                </div>
+              </div>
+
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">
+                An intimate and exquisite Tuscan-style reception ballroom featuring glowing chandeliers, warm candlelight, a spacious dance floor, and premier catering for our grand celebration.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+              <a href="https://www.google.com/maps/search/?api=1&query=The+White+Room+2227+W+Park+Row+Dr+Pantego+TX+76013" target="_blank" rel="noopener" class="btn-gold text-xs sm:text-sm flex-1">
+                <i data-lucide="navigation" class="w-4 h-4"></i>
+                <span>Google Maps</span>
+              </a>
+              <a href="https://whiteroomtexas.com" target="_blank" rel="noopener" class="btn-outline-gold text-xs sm:text-sm flex-1">
+                <i data-lucide="globe" class="w-4 h-4"></i>
+                <span>Venue Website</span>
+              </a>
+            </div>
           </div>
         </div>
 
         <!-- Family Hub: Cicely's House -->
-        <div class="luxury-card p-6 sm:p-8 flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between gap-4 mb-4">
-              <span class="badge-dark">Family Hospitality Hub</span>
-              <span class="text-xs text-gold-400 font-semibold">South Arlington</span>
+        <div class="luxury-card flex flex-col justify-between overflow-hidden">
+          <div class="card-img-header">
+            <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1000&q=80" alt="Cicely's Warm Welcoming Texas Home" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between z-10">
+              <span class="badge-cranberry">Family Gathering Hub</span>
+              <span class="badge-dark text-[10px]"><i data-lucide="heart" class="w-3 h-3 inline mr-1 text-cranberry-400"></i> Home Base</span>
             </div>
-            
-            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-3">Cicely's House</h3>
-            
-            <div class="space-y-2.5 text-slate-300 text-xs sm:text-sm mb-6">
-              <div class="flex items-start gap-3">
-                <i data-lucide="home" class="w-5 h-5 text-gold-400 shrink-0 mt-0.5"></i>
-                <div>
-                  <div class="font-medium text-white">222 Quail Trail Lane</div>
-                  <div class="text-slate-400">Arlington, TX 76002 (South Arlington)</div>
-                </div>
-              </div>
-              <div class="flex items-center gap-3">
-                <i data-lucide="users" class="w-5 h-5 text-gold-400 shrink-0"></i>
-                <span>Welcome Base & Family Hangout</span>
-              </div>
+            <div class="absolute bottom-3 left-4 z-10">
+              <span class="text-xs text-gold-300 font-semibold tracking-wider uppercase">South Arlington, TX</span>
             </div>
-
-            <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">
-              The primary family hospitality house for out-of-town guests arriving in town. Come by to relax, grab refreshments, drop off luggage, and catch up with family throughout the weekend!
-            </p>
           </div>
 
-          <div class="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-            <a href="https://www.google.com/maps/search/?api=1&query=222+Quail+Trail+Lane+Arlington+TX+76002" target="_blank" rel="noopener" class="btn-gold text-xs sm:text-sm">
-              <i data-lucide="navigation" class="w-4 h-4"></i>
-              <span>Google Maps to Cicely's House</span>
-            </a>
-            <button onclick="openTab('travel')" class="btn-ghost text-xs sm:text-sm">
-              <i data-lucide="plane" class="w-4 h-4"></i>
-              <span>Airport Distances</span>
-            </button>
+          <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-4 mb-3">
+                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white">Cicely's House</h3>
+                <span class="badge-gold text-[10px]">South Arlington</span>
+              </div>
+              
+              <div class="space-y-2 text-slate-300 text-xs sm:text-sm mb-5">
+                <div class="flex items-start gap-2.5">
+                  <i data-lucide="home" class="w-4 h-4 text-cranberry-400 shrink-0 mt-0.5"></i>
+                  <div>
+                    <div class="font-medium text-white">222 Quail Trail Lane</div>
+                    <div class="text-slate-400">Arlington, TX 76002</div>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <i data-lucide="users" class="w-4 h-4 text-gold-400 shrink-0"></i>
+                  <span>Welcome Base & Family Hangout</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <i data-lucide="coffee" class="w-4 h-4 text-gold-400 shrink-0"></i>
+                  <span>Refreshments, luggage drop-off & hugs</span>
+                </div>
+              </div>
+
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">
+                The primary family hospitality house for out-of-town guests arriving in town. Come by to relax, grab refreshments, drop off luggage, and catch up with family throughout the weekend!
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+              <a href="https://www.google.com/maps/search/?api=1&query=222+Quail+Trail+Lane+Arlington+TX+76002" target="_blank" rel="noopener" class="btn-gold text-xs sm:text-sm flex-1">
+                <i data-lucide="navigation" class="w-4 h-4"></i>
+                <span>Google Maps to House</span>
+              </a>
+              <button onclick="openTab('travel')" class="btn-ghost text-xs sm:text-sm flex-1">
+                <i data-lucide="plane" class="w-4 h-4"></i>
+                <span>Airport Routes</span>
+              </button>
+            </div>
           </div>
         </div>
 
       </div>
 
       <!-- Dress Code Spotlight -->
-      <div class="glass-panel p-6 sm:p-8 md:p-10 border-gold-500/40 relative overflow-hidden">
-        <div class="absolute -right-16 -top-16 w-64 h-64 bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="glass-panel p-6 sm:p-8 md:p-10 border-cranberry-500/30 relative overflow-hidden bg-gradient-to-br from-[#1c0d15] via-[#12080d] to-[#0a0608]">
+        <div class="absolute -right-16 -top-16 w-64 h-64 bg-cranberry-500/15 rounded-full blur-3xl pointer-events-none"></div>
         <div class="max-w-3xl">
           <div class="flex items-center gap-2 text-gold-400 uppercase text-xs tracking-widest font-bold mb-3">
-            <i data-lucide="sparkles" class="w-4 h-4"></i>
-            <span>Party Theme & Attire</span>
+            <i data-lucide="sparkles" class="w-4 h-4 text-cranberry-400"></i>
+            <span class="text-cranberry-300">Party Theme & Attire</span>
           </div>
           <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-3">
-            Dress to Impress in ALL BLACK
+            Dress to Impress in <span class="gold-gradient-text">ALL BLACK</span>
           </h3>
           <p class="text-slate-300 text-xs sm:text-base leading-relaxed mb-6">
             We are asking all guests to dress in <strong>Head-to-Toe All Black</strong> (formal, cocktail, or chic evening attire). Black suits, tuxedos, evening gowns, chic jumpsuits, and dark sleek silhouettes. Gold and metallic jewelry accents are welcome to add your personal sparkle!
           </p>
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5 text-xs sm:text-sm">
-            <div class="p-4 rounded-xl bg-black/60 border border-white/10">
+            <div class="p-4 rounded-xl bg-black/60 border border-cranberry-500/20">
               <div class="font-semibold text-gold-300 mb-1">👔 Gentlemen</div>
               <p class="text-slate-400">Black suits, dark blazers, crisp black button-downs, black ties/bowties.</p>
             </div>
-            <div class="p-4 rounded-xl bg-black/60 border border-white/10">
+            <div class="p-4 rounded-xl bg-black/60 border border-cranberry-500/20">
               <div class="font-semibold text-gold-300 mb-1">👗 Ladies</div>
               <p class="text-slate-400">Little black dress, elegant gowns, black chic jumpsuits, gold jewelry accents.</p>
             </div>
-            <div class="p-4 rounded-xl bg-black/60 border border-white/10">
-              <div class="font-semibold text-gold-300 mb-1">✨ Vibe</div>
+            <div class="p-4 rounded-xl bg-black/60 border border-cranberry-500/20">
+              <div class="font-semibold text-cranberry-300 mb-1">✨ Vibe</div>
               <p class="text-slate-400">Sophisticated, stylish, festive, and ready for timeless family portraits.</p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Weekend Schedule / Itinerary -->
+      <!-- Weekend Schedule / Itinerary with Event Photos -->
       <div>
         <div class="text-center max-w-xl mx-auto mb-8">
-          <span class="badge-gold mb-2 inline-block">Weekend Schedule</span>
-          <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-1">Weekend Itinerary</h3>
+          <span class="badge-cranberry mb-2 inline-block">Weekend Schedule</span>
+          <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-1">Weekend Itinerary & Events</h3>
           <p class="text-slate-400 text-xs sm:text-sm">Join us for the celebrations throughout the weekend.</p>
         </div>
 
-        <div class="space-y-4 max-w-3xl mx-auto">
+        <div class="space-y-5 max-w-4xl mx-auto">
           <!-- Item 1: Friday -->
-          <div class="luxury-card p-5 sm:p-6 bg-[#12141c] border border-gold-500/25 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5">
-            <div class="w-16 h-16 rounded-2xl bg-black border-2 border-gold-500/50 flex flex-col items-center justify-center shrink-0 shadow-md">
-              <span class="text-[11px] uppercase tracking-wider font-bold text-gold-400 leading-none">OCT</span>
-              <span class="text-2xl font-serif font-black text-white leading-tight mt-0.5">09</span>
-            </div>
-            <div class="flex-1">
-              <div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-black/80 border border-gold-500/30 text-gold-300 text-[11px] font-semibold mb-1">
-                <i data-lucide="clock" class="w-3 h-3 text-gold-400"></i>
-                <span>Friday Evening • 6:00 PM – 9:00 PM</span>
+          <div class="luxury-card overflow-hidden flex flex-col sm:flex-row items-stretch border border-gold-500/20">
+            <div class="sm:w-56 h-44 sm:h-auto relative shrink-0">
+              <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80" alt="Family Welcome Meet & Greet" class="w-full h-full object-cover" loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 sm:from-transparent sm:to-black/40"></div>
+              <div class="absolute top-3 left-3 sm:hidden">
+                <span class="badge-dark text-[10px]">Oct 09 • Welcome</span>
               </div>
-              <h4 class="text-lg sm:text-xl font-serif font-bold text-white mt-1">Family Welcome & Meet & Greet</h4>
-              <p class="text-xs sm:text-sm text-gold-400 flex items-center gap-1.5 mt-1 font-medium">
-                <i data-lucide="map-pin" class="w-3.5 h-3.5 shrink-0"></i> Cicely's House (222 Quail Trail Ln, Arlington)
-              </p>
-              <p class="text-slate-300 text-xs sm:text-sm mt-2 leading-relaxed">
-                Casual hospitality, drinks, Texas refreshments, and hugs as out-of-town guests arrive.
-              </p>
+            </div>
+            <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-2">
+                  <div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-cranberry-900/60 border border-cranberry-500/40 text-gold-300 text-[11px] font-semibold">
+                    <i data-lucide="clock" class="w-3 h-3 text-gold-400"></i>
+                    <span>Friday Evening • 6:00 PM – 9:00 PM</span>
+                  </div>
+                  <span class="hidden sm:inline-block badge-dark text-[10px]">Oct 09</span>
+                </div>
+                <h4 class="text-lg sm:text-xl font-serif font-bold text-white mt-1">Family Welcome & Meet & Greet</h4>
+                <p class="text-xs sm:text-sm text-gold-400 flex items-center gap-1.5 mt-1 font-medium">
+                  <i data-lucide="map-pin" class="w-3.5 h-3.5 shrink-0 text-cranberry-400"></i> Cicely's House (222 Quail Trail Ln, Arlington)
+                </p>
+                <p class="text-slate-300 text-xs sm:text-sm mt-2 leading-relaxed">
+                  Casual hospitality, drinks, Texas refreshments, and hugs as out-of-town guests arrive.
+                </p>
+              </div>
             </div>
           </div>
 
           <!-- Item 2: Saturday Main Event -->
-          <div class="luxury-card p-5 sm:p-6 bg-[#151824] border-2 border-gold-500/60 shadow-xl shadow-gold-500/5 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5">
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-b from-gold-400 to-gold-600 border-2 border-gold-300 flex flex-col items-center justify-center shrink-0 shadow-lg shadow-gold-500/20">
-              <span class="text-[11px] uppercase tracking-wider font-black text-black leading-none">OCT</span>
-              <span class="text-2xl font-serif font-black text-black leading-tight mt-0.5">10</span>
-            </div>
-            <div class="flex-1">
-              <div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-gold-500/20 border border-gold-400/50 text-gold-200 text-[11px] font-bold mb-1">
-                <i data-lucide="sparkles" class="w-3 h-3 text-gold-300"></i>
-                <span>MAIN EVENT • 6:30 PM – 10:30 PM</span>
+          <div class="luxury-card overflow-hidden flex flex-col sm:flex-row items-stretch border-2 border-gold-500/60 shadow-xl shadow-cranberry-900/30 bg-[#1a0e14]">
+            <div class="sm:w-56 h-48 sm:h-auto relative shrink-0">
+              <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80" alt="Cicely's 80th Birthday Celebration Ballroom" class="w-full h-full object-cover" loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 sm:from-transparent sm:to-black/40"></div>
+              <div class="absolute top-3 left-3">
+                <span class="badge-gold text-[10px]">✨ MAIN GALA</span>
               </div>
-              <h4 class="text-xl sm:text-2xl font-serif font-bold text-white mt-1">Cicely's 80th Birthday Celebration</h4>
-              <p class="text-xs sm:text-sm text-gold-300 flex items-center gap-1.5 mt-1 font-semibold">
-                <i data-lucide="map-pin" class="w-3.5 h-3.5 shrink-0 text-gold-400"></i> The White Room (2227 W Park Row Dr, Pantego, TX)
-              </p>
-              <p class="text-slate-200 text-xs sm:text-sm mt-2 leading-relaxed">
-                Dinner, music, speeches, champagne toast, and dancing. <strong>Attire: Dress to Impress in ALL BLACK</strong>.
-              </p>
+            </div>
+            <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-2">
+                  <div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-gold-500/20 border border-gold-400/50 text-gold-200 text-[11px] font-bold">
+                    <i data-lucide="sparkles" class="w-3 h-3 text-gold-300"></i>
+                    <span>SATURDAY MAIN EVENT • 6:30 PM – 10:30 PM</span>
+                  </div>
+                  <span class="badge-cranberry text-[10px]">OCT 10</span>
+                </div>
+                <h4 class="text-xl sm:text-2xl font-serif font-bold text-white mt-1">Cicely's 80th Birthday Celebration</h4>
+                <p class="text-xs sm:text-sm text-gold-300 flex items-center gap-1.5 mt-1 font-semibold">
+                  <i data-lucide="map-pin" class="w-3.5 h-3.5 shrink-0 text-gold-400"></i> The White Room (2227 W Park Row Dr, Pantego, TX)
+                </p>
+                <p class="text-slate-200 text-xs sm:text-sm mt-2 leading-relaxed">
+                  Dinner, music, speeches, champagne toast, and dancing. <strong>Attire: Dress to Impress in ALL BLACK</strong>.
+                </p>
+              </div>
             </div>
           </div>
 
           <!-- Item 3: Sunday Farewell -->
-          <div class="luxury-card p-5 sm:p-6 bg-[#12141c] border border-gold-500/25 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5">
-            <div class="w-16 h-16 rounded-2xl bg-black border-2 border-gold-500/50 flex flex-col items-center justify-center shrink-0 shadow-md">
-              <span class="text-[11px] uppercase tracking-wider font-bold text-gold-400 leading-none">OCT</span>
-              <span class="text-2xl font-serif font-black text-white leading-tight mt-0.5">11</span>
-            </div>
-            <div class="flex-1">
-              <div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-black/80 border border-gold-500/30 text-gold-300 text-[11px] font-semibold mb-1">
-                <i data-lucide="clock" class="w-3 h-3 text-gold-400"></i>
-                <span>Sunday Morning • 10:30 AM – 1:30 PM</span>
+          <div class="luxury-card overflow-hidden flex flex-col sm:flex-row items-stretch border border-gold-500/20">
+            <div class="sm:w-56 h-44 sm:h-auto relative shrink-0">
+              <img src="https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?auto=format&fit=crop&w=800&q=80" alt="Farewell Family Brunch & Photos" class="w-full h-full object-cover" loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 sm:from-transparent sm:to-black/40"></div>
+              <div class="absolute top-3 left-3 sm:hidden">
+                <span class="badge-dark text-[10px]">Oct 11 • Farewell</span>
               </div>
-              <h4 class="text-lg sm:text-xl font-serif font-bold text-white mt-1">Farewell Family Brunch & Photos</h4>
-              <p class="text-xs sm:text-sm text-gold-400 flex items-center gap-1.5 mt-1 font-medium">
-                <i data-lucide="map-pin" class="w-3.5 h-3.5 shrink-0"></i> Cicely's House / Local Brunch
-              </p>
-              <p class="text-slate-300 text-xs sm:text-sm mt-2 leading-relaxed">
-                Coffee, breakfast pastries, final group photos, and safe travels farewells.
-              </p>
+            </div>
+            <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-2">
+                  <div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-cranberry-900/60 border border-cranberry-500/40 text-gold-300 text-[11px] font-semibold">
+                    <i data-lucide="clock" class="w-3 h-3 text-gold-400"></i>
+                    <span>Sunday Morning • 10:30 AM – 1:30 PM</span>
+                  </div>
+                  <span class="hidden sm:inline-block badge-dark text-[10px]">Oct 11</span>
+                </div>
+                <h4 class="text-lg sm:text-xl font-serif font-bold text-white mt-1">Farewell Family Brunch & Photos</h4>
+                <p class="text-xs sm:text-sm text-gold-400 flex items-center gap-1.5 mt-1 font-medium">
+                  <i data-lucide="map-pin" class="w-3.5 h-3.5 shrink-0 text-cranberry-400"></i> Cicely's House / Local Brunch
+                </p>
+                <p class="text-slate-300 text-xs sm:text-sm mt-2 leading-relaxed">
+                  Coffee, breakfast pastries, final group photos, and safe travels farewells.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -498,148 +570,170 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
         
         <!-- DFW Airport Card -->
-        <div class="luxury-card p-5 sm:p-8 flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between gap-3 mb-3">
-              <div class="flex items-center gap-2">
-                <span class="p-2 rounded-lg bg-gold-500/20 text-gold-400 border border-gold-500/30 font-mono font-bold text-xs sm:text-sm">DFW</span>
+        <div class="luxury-card flex flex-col justify-between overflow-hidden">
+          <div class="card-img-header">
+            <img src="https://images.unsplash.com/photo-1530521954074-e64f6810b32d?auto=format&fit=crop&w=1000&q=80" alt="Dallas Fort Worth International Airport" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between z-10">
+              <span class="p-1.5 px-3 rounded-lg bg-black/70 text-gold-400 border border-gold-500/40 font-mono font-bold text-xs sm:text-sm">DFW AIRPORT</span>
+              <span class="badge-cranberry text-[10px]">Primary Hub</span>
+            </div>
+            <div class="absolute bottom-3 left-4 z-10">
+              <span class="text-xs text-gold-300 font-semibold tracking-wider">20–25 mins to Arlington</span>
+            </div>
+          </div>
+
+          <div class="p-5 sm:p-7 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-3 mb-2">
                 <h3 class="font-serif text-lg sm:text-2xl font-bold text-white">Dallas/Fort Worth International</h3>
+                <span class="badge-gold text-[10px] hidden sm:inline-block">All Major Airlines</span>
               </div>
-              <span class="badge-gold text-[10px]">Main Airport</span>
-            </div>
-            
-            <div class="inline-flex items-center gap-1.5 text-xs font-semibold text-gold-300 bg-gold-500/10 border border-gold-500/20 px-3 py-1 rounded-full mb-4">
-              <i data-lucide="clock" class="w-3.5 h-3.5 text-gold-400 shrink-0"></i>
-              <span>Approximately 20–25 minutes away</span>
-            </div>
+              
+              <div class="inline-flex items-center gap-1.5 text-xs font-semibold text-gold-300 bg-cranberry-900/40 border border-cranberry-500/30 px-3 py-1 rounded-full mb-4">
+                <i data-lucide="clock" class="w-3.5 h-3.5 text-gold-400 shrink-0"></i>
+                <span>Approx. 20–25 minutes to party & family hub</span>
+              </div>
 
-            <p class="text-xs text-slate-400 mb-5 leading-relaxed">
-              Primary international airport hub located north of Arlington. Serves American Airlines hub and all major airlines.
-            </p>
+              <p class="text-xs text-slate-400 mb-5 leading-relaxed">
+                Primary international airport hub located north of Arlington. Serves American Airlines hub and all major domestic & international carriers.
+              </p>
 
-            <!-- Route 1: DFW to Cicely's House -->
-            <div class="p-3.5 sm:p-4 rounded-xl bg-black/50 border border-white/10 mb-4 hover:border-gold-500/40 transition">
-              <div class="flex items-center justify-between mb-2">
-                <div class="font-semibold text-white text-xs sm:text-sm flex items-center gap-1.5">
-                  <i data-lucide="home" class="w-4 h-4 text-gold-400 shrink-0"></i>
-                  <span>DFW ➡️ Cicely's House</span>
+              <!-- Route 1: DFW to Cicely's House -->
+              <div class="p-3.5 sm:p-4 rounded-xl bg-black/50 border border-white/10 mb-4 hover:border-cranberry-500/40 transition">
+                <div class="flex items-center justify-between mb-2">
+                  <div class="font-semibold text-white text-xs sm:text-sm flex items-center gap-1.5">
+                    <i data-lucide="home" class="w-4 h-4 text-cranberry-400 shrink-0"></i>
+                    <span>DFW ➡️ Cicely's House</span>
+                  </div>
+                  <span class="text-xs font-bold text-gold-300">21.4 miles</span>
                 </div>
-                <span class="text-xs font-bold text-gold-300">21.4 miles</span>
-              </div>
-              <div class="text-xs text-slate-400 mb-2 flex items-center justify-between">
-                <span class="truncate">📍 222 Quail Trail Ln, Arlington TX</span>
-                <span class="text-emerald-400 font-medium shrink-0">~20–25m</span>
-              </div>
-              <div class="text-xs text-slate-400 mb-3 bg-dark-900/60 p-2 rounded">
-                <strong>Fastest Route:</strong> Straight south on <strong>TX-360 S</strong> directly into South Arlington.
-              </div>
-              <div class="flex items-center gap-2">
-                <a href="https://www.google.com/maps/dir/?api=1&origin=Dallas/Fort+Worth+International+Airport&destination=222+Quail+Trail+Lane+Arlington+TX+76002" target="_blank" rel="noopener" class="btn-gold text-xs py-1.5 px-3 flex-1 sm:flex-initial justify-center">
-                  <i data-lucide="navigation" class="w-3.5 h-3.5"></i> Maps Directions
-                </a>
-                <a href="https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[formatted_address]=222%20Quail%20Trail%20Lane%2C%20Arlington%2C%20TX%2076002" target="_blank" rel="noopener" class="btn-ghost text-xs py-1.5 px-3 flex-1 sm:flex-initial justify-center">
-                  <i data-lucide="car" class="w-3.5 h-3.5"></i> Uber / Lyft
-                </a>
-              </div>
-            </div>
-
-            <!-- Route 2: DFW to The White Room -->
-            <div class="p-3.5 sm:p-4 rounded-xl bg-black/50 border border-white/10 hover:border-gold-500/40 transition">
-              <div class="flex items-center justify-between mb-2">
-                <div class="font-semibold text-white text-xs sm:text-sm flex items-center gap-1.5">
-                  <i data-lucide="glass-water" class="w-4 h-4 text-gold-400 shrink-0"></i>
-                  <span>DFW ➡️ The White Room</span>
+                <div class="text-xs text-slate-400 mb-2 flex items-center justify-between">
+                  <span class="truncate">📍 222 Quail Trail Ln, Arlington TX</span>
+                  <span class="text-emerald-400 font-medium shrink-0">~20–25m</span>
                 </div>
-                <span class="text-xs font-bold text-gold-300">18.2 miles</span>
+                <div class="text-xs text-slate-400 mb-3 bg-dark-900/60 p-2 rounded">
+                  <strong>Fastest Route:</strong> Straight south on <strong>TX-360 S</strong> directly into South Arlington.
+                </div>
+                <div class="flex items-center gap-2">
+                  <a href="https://www.google.com/maps/dir/?api=1&origin=Dallas/Fort+Worth+International+Airport&destination=222+Quail+Trail+Lane+Arlington+TX+76002" target="_blank" rel="noopener" class="btn-gold text-xs py-1.5 px-3 flex-1 sm:flex-initial justify-center">
+                    <i data-lucide="navigation" class="w-3.5 h-3.5"></i> Maps Directions
+                  </a>
+                  <a href="https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[formatted_address]=222%20Quail%20Trail%20Lane%2C%20Arlington%2C%20TX%2076002" target="_blank" rel="noopener" class="btn-ghost text-xs py-1.5 px-3 flex-1 sm:flex-initial justify-center">
+                    <i data-lucide="car" class="w-3.5 h-3.5"></i> Uber / Lyft
+                  </a>
+                </div>
               </div>
-              <div class="text-xs text-slate-400 mb-2 flex items-center justify-between">
-                <span class="truncate">📍 2227 W Park Row Dr, Pantego TX</span>
-                <span class="text-emerald-400 font-medium shrink-0">~20–25m</span>
-              </div>
-              <div class="text-xs text-slate-400 mb-3 bg-dark-900/60 p-2 rounded">
-                <strong>Fastest Route:</strong> TX-360 S to Spur 303 / Pioneer Pkwy or Park Row Dr into Pantego.
-              </div>
-              <div class="flex items-center gap-2">
-                <a href="https://www.google.com/maps/dir/?api=1&origin=Dallas/Fort+Worth+International+Airport&destination=2227+W+Park+Row+Dr+Pantego+TX+76013" target="_blank" rel="noopener" class="btn-gold text-xs py-1.5 px-3 flex-1 sm:flex-initial justify-center">
-                  <i data-lucide="navigation" class="w-3.5 h-3.5"></i> Maps Directions
-                </a>
-                <a href="https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[formatted_address]=2227%20W%20Park%20Row%20Dr%2C%20Pantego%2C%20TX%2076013" target="_blank" rel="noopener" class="btn-ghost text-xs py-1.5 px-3 flex-1 sm:flex-initial justify-center">
-                  <i data-lucide="car" class="w-3.5 h-3.5"></i> Uber / Lyft
-                </a>
+
+              <!-- Route 2: DFW to The White Room -->
+              <div class="p-3.5 sm:p-4 rounded-xl bg-black/50 border border-white/10 hover:border-cranberry-500/40 transition">
+                <div class="flex items-center justify-between mb-2">
+                  <div class="font-semibold text-white text-xs sm:text-sm flex items-center gap-1.5">
+                    <i data-lucide="glass-water" class="w-4 h-4 text-cranberry-400 shrink-0"></i>
+                    <span>DFW ➡️ The White Room</span>
+                  </div>
+                  <span class="text-xs font-bold text-gold-300">18.2 miles</span>
+                </div>
+                <div class="text-xs text-slate-400 mb-2 flex items-center justify-between">
+                  <span class="truncate">📍 2227 W Park Row Dr, Pantego TX</span>
+                  <span class="text-emerald-400 font-medium shrink-0">~20–25m</span>
+                </div>
+                <div class="text-xs text-slate-400 mb-3 bg-dark-900/60 p-2 rounded">
+                  <strong>Fastest Route:</strong> TX-360 S to Spur 303 / Pioneer Pkwy or Park Row Dr into Pantego.
+                </div>
+                <div class="flex items-center gap-2">
+                  <a href="https://www.google.com/maps/dir/?api=1&origin=Dallas/Fort+Worth+International+Airport&destination=2227+W+Park+Row+Dr+Pantego+TX+76013" target="_blank" rel="noopener" class="btn-gold text-xs py-1.5 px-3 flex-1 sm:flex-initial justify-center">
+                    <i data-lucide="navigation" class="w-3.5 h-3.5"></i> Maps Directions
+                  </a>
+                  <a href="https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[formatted_address]=2227%20W%20Park%20Row%20Dr%2C%20Pantego%2C%20TX%2076013" target="_blank" rel="noopener" class="btn-ghost text-xs py-1.5 px-3 flex-1 sm:flex-initial justify-center">
+                    <i data-lucide="car" class="w-3.5 h-3.5"></i> Uber / Lyft
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
         <!-- DAL (Love Field) Airport Card -->
-        <div class="luxury-card p-5 sm:p-8 flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between gap-3 mb-3">
-              <div class="flex items-center gap-2">
-                <span class="p-2 rounded-lg bg-gold-500/20 text-gold-400 border border-gold-500/30 font-mono font-bold text-xs sm:text-sm">DAL</span>
+        <div class="luxury-card flex flex-col justify-between overflow-hidden">
+          <div class="card-img-header">
+            <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1000&q=80" alt="Dallas Love Field Airport" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between z-10">
+              <span class="p-1.5 px-3 rounded-lg bg-black/70 text-gold-400 border border-gold-500/40 font-mono font-bold text-xs sm:text-sm">DAL AIRPORT</span>
+              <span class="badge-cranberry text-[10px]">Southwest Hub</span>
+            </div>
+            <div class="absolute bottom-3 left-4 z-10">
+              <span class="text-xs text-gold-300 font-semibold tracking-wider">35–40 mins to Arlington</span>
+            </div>
+          </div>
+
+          <div class="p-5 sm:p-7 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-3 mb-2">
                 <h3 class="font-serif text-lg sm:text-2xl font-bold text-white">Dallas Love Field</h3>
+                <span class="badge-dark text-[10px] hidden sm:inline-block">Dallas Hub</span>
               </div>
-              <span class="badge-dark text-[10px]">Southwest Hub</span>
-            </div>
-            
-            <div class="inline-flex items-center gap-1.5 text-xs font-semibold text-gold-300 bg-gold-500/10 border border-gold-500/20 px-3 py-1 rounded-full mb-4">
-              <i data-lucide="clock" class="w-3.5 h-3.5 text-gold-400 shrink-0"></i>
-              <span>Approximately 35–40 minutes away</span>
-            </div>
+              
+              <div class="inline-flex items-center gap-1.5 text-xs font-semibold text-gold-300 bg-cranberry-900/40 border border-cranberry-500/30 px-3 py-1 rounded-full mb-4">
+                <i data-lucide="clock" class="w-3.5 h-3.5 text-gold-400 shrink-0"></i>
+                <span>Approximately 35–40 minutes away</span>
+              </div>
 
-            <p class="text-xs text-slate-400 mb-5 leading-relaxed">
-              Centrally located closer to downtown Dallas; primary hub for Southwest Airlines travelers.
-            </p>
+              <p class="text-xs text-slate-400 mb-5 leading-relaxed">
+                Centrally located closer to downtown Dallas; primary hub for Southwest Airlines travelers flying into DFW metroplex.
+              </p>
 
-            <!-- Route 1: DAL to Cicely's House -->
-            <div class="p-3.5 sm:p-4 rounded-xl bg-black/50 border border-white/10 mb-4 hover:border-gold-500/40 transition">
-              <div class="flex items-center justify-between mb-2">
-                <div class="font-semibold text-white text-xs sm:text-sm flex items-center gap-1.5">
-                  <i data-lucide="home" class="w-4 h-4 text-gold-400 shrink-0"></i>
-                  <span>DAL ➡️ Cicely's House</span>
+              <!-- Route 1: DAL to Cicely's House -->
+              <div class="p-3.5 sm:p-4 rounded-xl bg-black/50 border border-white/10 mb-4 hover:border-cranberry-500/40 transition">
+                <div class="flex items-center justify-between mb-2">
+                  <div class="font-semibold text-white text-xs sm:text-sm flex items-center gap-1.5">
+                    <i data-lucide="home" class="w-4 h-4 text-cranberry-400 shrink-0"></i>
+                    <span>DAL ➡️ Cicely's House</span>
+                  </div>
+                  <span class="text-xs font-bold text-gold-300">28.5 miles</span>
                 </div>
-                <span class="text-xs font-bold text-gold-300">28.5 miles</span>
-              </div>
-              <div class="text-xs text-slate-400 mb-2 flex items-center justify-between">
-                <span class="truncate">📍 222 Quail Trail Ln, Arlington TX</span>
-                <span class="text-emerald-400 font-medium shrink-0">~35–40m</span>
-              </div>
-              <div class="text-xs text-slate-400 mb-3 bg-dark-900/60 p-2 rounded">
-                <strong>Fastest Route:</strong> Mockingbird Ln to I-35E S ➡️ I-30 W ➡️ TX-360 S.
-              </div>
-              <div class="flex items-center gap-2">
-                <a href="https://www.google.com/maps/dir/?api=1&origin=Dallas+Love+Field+Airport&destination=222+Quail+Trail+Lane+Arlington+TX+76002" target="_blank" rel="noopener" class="btn-gold text-xs py-1.5 px-3 flex-1 sm:flex-initial justify-center">
-                  <i data-lucide="navigation" class="w-3.5 h-3.5"></i> Maps Directions
-                </a>
-                <a href="https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[formatted_address]=222%20Quail%20Trail%20Lane%2C%20Arlington%2C%20TX%2076002" target="_blank" rel="noopener" class="btn-ghost text-xs py-1.5 px-3 flex-1 sm:flex-initial justify-center">
-                  <i data-lucide="car" class="w-3.5 h-3.5"></i> Uber / Lyft
-                </a>
-              </div>
-            </div>
-
-            <!-- Route 2: DAL to The White Room -->
-            <div class="p-3.5 sm:p-4 rounded-xl bg-black/50 border border-white/10 hover:border-gold-500/40 transition">
-              <div class="flex items-center justify-between mb-2">
-                <div class="font-semibold text-white text-xs sm:text-sm flex items-center gap-1.5">
-                  <i data-lucide="glass-water" class="w-4 h-4 text-gold-400 shrink-0"></i>
-                  <span>DAL ➡️ The White Room</span>
+                <div class="text-xs text-slate-400 mb-2 flex items-center justify-between">
+                  <span class="truncate">📍 222 Quail Trail Ln, Arlington TX</span>
+                  <span class="text-emerald-400 font-medium shrink-0">~35–40m</span>
                 </div>
-                <span class="text-xs font-bold text-gold-300">26.1 miles</span>
+                <div class="text-xs text-slate-400 mb-3 bg-dark-900/60 p-2 rounded">
+                  <strong>Fastest Route:</strong> Mockingbird Ln to I-35E S ➡️ I-30 W ➡️ TX-360 S.
+                </div>
+                <div class="flex items-center gap-2">
+                  <a href="https://www.google.com/maps/dir/?api=1&origin=Dallas+Love+Field+Airport&destination=222+Quail+Trail+Lane+Arlington+TX+76002" target="_blank" rel="noopener" class="btn-gold text-xs py-1.5 px-3 flex-1 sm:flex-initial justify-center">
+                    <i data-lucide="navigation" class="w-3.5 h-3.5"></i> Maps Directions
+                  </a>
+                  <a href="https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[formatted_address]=222%20Quail%20Trail%20Lane%2C%20Arlington%2C%20TX%2076002" target="_blank" rel="noopener" class="btn-ghost text-xs py-1.5 px-3 flex-1 sm:flex-initial justify-center">
+                    <i data-lucide="car" class="w-3.5 h-3.5"></i> Uber / Lyft
+                  </a>
+                </div>
               </div>
-              <div class="text-xs text-slate-400 mb-2 flex items-center justify-between">
-                <span class="truncate">📍 2227 W Park Row Dr, Pantego TX</span>
-                <span class="text-emerald-400 font-medium shrink-0">~35–40m</span>
-              </div>
-              <div class="text-xs text-slate-400 mb-3 bg-dark-900/60 p-2 rounded">
-                <strong>Fastest Route:</strong> I-30 West to Arlington, exit Fielder Rd south to Park Row Dr.
-              </div>
-              <div class="flex items-center gap-2">
-                <a href="https://www.google.com/maps/dir/?api=1&origin=Dallas+Love+Field+Airport&destination=2227+W+Park+Row+Dr+Pantego+TX+76013" target="_blank" rel="noopener" class="btn-gold text-xs py-1.5 px-3 flex-1 sm:flex-initial justify-center">
-                  <i data-lucide="navigation" class="w-3.5 h-3.5"></i> Maps Directions
-                </a>
-                <a href="https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[formatted_address]=2227%20W%20Park%20Row%20Dr%2C%20Pantego%2C%20TX%2076013" target="_blank" rel="noopener" class="btn-ghost text-xs py-1.5 px-3 flex-1 sm:flex-initial justify-center">
-                  <i data-lucide="car" class="w-3.5 h-3.5"></i> Uber / Lyft
-                </a>
+
+              <!-- Route 2: DAL to The White Room -->
+              <div class="p-3.5 sm:p-4 rounded-xl bg-black/50 border border-white/10 hover:border-cranberry-500/40 transition">
+                <div class="flex items-center justify-between mb-2">
+                  <div class="font-semibold text-white text-xs sm:text-sm flex items-center gap-1.5">
+                    <i data-lucide="glass-water" class="w-4 h-4 text-cranberry-400 shrink-0"></i>
+                    <span>DAL ➡️ The White Room</span>
+                  </div>
+                  <span class="text-xs font-bold text-gold-300">26.1 miles</span>
+                </div>
+                <div class="text-xs text-slate-400 mb-2 flex items-center justify-between">
+                  <span class="truncate">📍 2227 W Park Row Dr, Pantego TX</span>
+                  <span class="text-emerald-400 font-medium shrink-0">~35–40m</span>
+                </div>
+                <div class="text-xs text-slate-400 mb-3 bg-dark-900/60 p-2 rounded">
+                  <strong>Fastest Route:</strong> I-30 West to Arlington, exit Fielder Rd south to Park Row Dr.
+                </div>
+                <div class="flex items-center gap-2">
+                  <a href="https://www.google.com/maps/dir/?api=1&origin=Dallas+Love+Field+Airport&destination=2227+W+Park+Row+Dr+Pantego+TX+76013" target="_blank" rel="noopener" class="btn-gold text-xs py-1.5 px-3 flex-1 sm:flex-initial justify-center">
+                    <i data-lucide="navigation" class="w-3.5 h-3.5"></i> Maps Directions
+                  </a>
+                  <a href="https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[formatted_address]=2227%20W%20Park%20Row%20Dr%2C%20Pantego%2C%20TX%2076013" target="_blank" rel="noopener" class="btn-ghost text-xs py-1.5 px-3 flex-1 sm:flex-initial justify-center">
+                    <i data-lucide="car" class="w-3.5 h-3.5"></i> Uber / Lyft
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -679,24 +773,34 @@
         </div>
 
         <!-- City filter chips -->
-        <div class="flex flex-wrap items-center gap-1.5 sm:gap-2">
-          <span class="text-[11px] uppercase tracking-wider text-slate-400 mr-1 font-semibold">City:</span>
-          <button class="filter-chip active" data-city="all" onclick="setRestaurantCity('all', this)">All Cities</button>
-          <button class="filter-chip" data-city="Arlington" onclick="setRestaurantCity('Arlington', this)">Arlington</button>
-          <button class="filter-chip" data-city="Mansfield" onclick="setRestaurantCity('Mansfield', this)">Mansfield</button>
-          <button class="filter-chip" data-city="Grand Prairie" onclick="setRestaurantCity('Grand Prairie', this)">Grand Prairie</button>
+        <div>
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold">City:</span>
+            <span class="text-[10px] text-cranberry-300 sm:hidden flex items-center gap-1 font-medium"><i data-lucide="hand" class="w-3 h-3 text-cranberry-400"></i> Swipe options <i data-lucide="arrow-right" class="w-2.5 h-2.5"></i></span>
+          </div>
+          <div class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto pb-1 scrollbar-none touch-pan-x">
+            <button class="filter-chip active shrink-0" data-city="all" onclick="setRestaurantCity('all', this)">All Cities</button>
+            <button class="filter-chip shrink-0" data-city="Arlington" onclick="setRestaurantCity('Arlington', this)">Arlington</button>
+            <button class="filter-chip shrink-0" data-city="Mansfield" onclick="setRestaurantCity('Mansfield', this)">Mansfield</button>
+            <button class="filter-chip shrink-0" data-city="Grand Prairie" onclick="setRestaurantCity('Grand Prairie', this)">Grand Prairie</button>
+          </div>
         </div>
 
         <!-- Meal Category filter chips -->
-        <div class="flex flex-wrap items-center gap-1.5 sm:gap-2">
-          <span class="text-[11px] uppercase tracking-wider text-slate-400 mr-1 font-semibold">Meal:</span>
-          <button class="filter-chip active" data-meal="all" onclick="setRestaurantMeal('all', this)">All Meals</button>
-          <button class="filter-chip" data-meal="Breakfast" onclick="setRestaurantMeal('Breakfast', this)">🥞 Breakfast</button>
-          <button class="filter-chip" data-meal="Brunch" onclick="setRestaurantMeal('Brunch', this)">🥂 Brunch</button>
-          <button class="filter-chip" data-meal="Lunch" onclick="setRestaurantMeal('Lunch', this)">🥪 Lunch</button>
-          <button class="filter-chip" data-meal="Dinner" onclick="setRestaurantMeal('Dinner', this)">🥩 Dinner</button>
-          <button class="filter-chip" data-meal="Happy Hour" onclick="setRestaurantMeal('Happy Hour', this)">🍹 Happy Hour</button>
-          <button class="filter-chip" data-meal="Late Night / 24-Hr" onclick="setRestaurantMeal('Late Night / 24-Hr', this)">🌙 Late Night</button>
+        <div>
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold">Meal Category:</span>
+            <span class="text-[10px] text-cranberry-300 sm:hidden flex items-center gap-1 font-medium"><i data-lucide="hand" class="w-3 h-3 text-cranberry-400"></i> Swipe categories <i data-lucide="arrow-right" class="w-2.5 h-2.5"></i></span>
+          </div>
+          <div class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto pb-1 scrollbar-none touch-pan-x">
+            <button class="filter-chip active shrink-0" data-meal="all" onclick="setRestaurantMeal('all', this)">All Meals</button>
+            <button class="filter-chip shrink-0" data-meal="Breakfast" onclick="setRestaurantMeal('Breakfast', this)">🥞 Breakfast</button>
+            <button class="filter-chip shrink-0" data-meal="Brunch" onclick="setRestaurantMeal('Brunch', this)">🥂 Brunch</button>
+            <button class="filter-chip shrink-0" data-meal="Lunch" onclick="setRestaurantMeal('Lunch', this)">🥪 Lunch</button>
+            <button class="filter-chip shrink-0" data-meal="Dinner" onclick="setRestaurantMeal('Dinner', this)">🥩 Dinner</button>
+            <button class="filter-chip shrink-0" data-meal="Happy Hour" onclick="setRestaurantMeal('Happy Hour', this)">🍹 Happy Hour</button>
+            <button class="filter-chip shrink-0" data-meal="Late Night / 24-Hr" onclick="setRestaurantMeal('Late Night / 24-Hr', this)">🌙 Late Night</button>
+          </div>
         </div>
       </div>
 
@@ -755,13 +859,19 @@
       </div>
 
       <!-- City Filter for Shopping -->
-      <div class="flex flex-wrap items-center justify-center gap-2 mb-6">
-        <button class="filter-chip active" data-shopcity="all" onclick="setShoppingCity('all', this)">All Regions</button>
-        <button class="filter-chip" data-shopcity="Arlington" onclick="setShoppingCity('Arlington', this)">Arlington</button>
-        <button class="filter-chip" data-shopcity="Grand Prairie" onclick="setShoppingCity('Grand Prairie', this)">Grand Prairie Outlets</button>
-        <button class="filter-chip" data-shopcity="Mansfield" onclick="setShoppingCity('Mansfield', this)">Mansfield</button>
-        <button class="filter-chip" data-shopcity="Dallas" onclick="setShoppingCity('Dallas', this)">Dallas Luxury</button>
-        <button class="filter-chip" data-shopcity="Fort Worth" onclick="setShoppingCity('Fort Worth', this)">Fort Worth / Stockyards</button>
+      <div>
+        <div class="flex items-center justify-between mb-2 sm:hidden px-1">
+          <span class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold">Filter Regions:</span>
+          <span class="text-[10px] text-cranberry-300 flex items-center gap-1 font-medium"><i data-lucide="hand" class="w-3 h-3 text-cranberry-400"></i> Swipe cities <i data-lucide="arrow-right" class="w-2.5 h-2.5"></i></span>
+        </div>
+        <div class="flex items-center gap-2 overflow-x-auto pb-2 mb-6 scrollbar-none touch-pan-x justify-start sm:justify-center">
+          <button class="filter-chip active shrink-0" data-shopcity="all" onclick="setShoppingCity('all', this)">All Regions</button>
+          <button class="filter-chip shrink-0" data-shopcity="Arlington" onclick="setShoppingCity('Arlington', this)">Arlington</button>
+          <button class="filter-chip shrink-0" data-shopcity="Grand Prairie" onclick="setShoppingCity('Grand Prairie', this)">Grand Prairie Outlets</button>
+          <button class="filter-chip shrink-0" data-shopcity="Mansfield" onclick="setShoppingCity('Mansfield', this)">Mansfield</button>
+          <button class="filter-chip shrink-0" data-shopcity="Dallas" onclick="setShoppingCity('Dallas', this)">Dallas Luxury</button>
+          <button class="filter-chip shrink-0" data-shopcity="Fort Worth" onclick="setShoppingCity('Fort Worth', this)">Fort Worth / Stockyards</button>
+        </div>
       </div>
 
       <!-- Shopping Centers Grid -->

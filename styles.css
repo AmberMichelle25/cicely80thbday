@@ -4,10 +4,10 @@
    ========================================================== */
 
 :root {
-  --bg-main: #090a0f;
-  --bg-card: #12141c;
-  --bg-card-hover: #181b26;
-  --bg-elevated: #1f2330;
+  --bg-main: #0a0608;
+  --bg-card: #150d11;
+  --bg-card-hover: #1f1218;
+  --bg-elevated: #291620;
   
   --gold-primary: #d4af37;
   --gold-light: #f5e296;
@@ -15,10 +15,19 @@
   --gold-gradient: linear-gradient(135deg, #f5e296 0%, #d4af37 50%, #aa820a 100%);
   --gold-subtle-glow: rgba(212, 175, 55, 0.18);
   --gold-border: rgba(212, 175, 55, 0.28);
+
+  --cranberry-primary: #8b1e3f;
+  --cranberry-light: #b9375e;
+  --cranberry-dark: #5c0e25;
+  --cranberry-deep: #3b0a18;
+  --cranberry-glow: rgba(185, 55, 94, 0.25);
+  --cranberry-gradient: linear-gradient(135deg, #b9375e 0%, #8b1e3f 50%, #5c0e25 100%);
+  --royal-gradient: linear-gradient(135deg, #b9375e 0%, #8b1e3f 40%, #d4af37 100%);
   
-  --text-main: #f8f9fa;
-  --text-muted: #a0a6b5;
+  --text-main: #fcf9fa;
+  --text-muted: #b8a8b0;
   --text-gold: #e5c05d;
+  --text-cranberry: #f2849e;
   
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
@@ -47,9 +56,9 @@ body {
   overflow-x: hidden;
   padding-bottom: 5rem; /* Room for mobile action bar */
   background-image: 
-    radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 10% 40%, rgba(212, 175, 55, 0.03) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(212, 175, 55, 0.04) 0%, transparent 50%);
+    radial-gradient(circle at 50% 0%, rgba(139, 30, 63, 0.22) 0%, transparent 60%),
+    radial-gradient(circle at 10% 40%, rgba(212, 175, 55, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 90% 80%, rgba(139, 30, 63, 0.16) 0%, transparent 55%);
   background-attachment: fixed;
 }
 
@@ -99,26 +108,41 @@ body {
   display: inline-block;
 }
 
+.cranberry-gradient-text {
+  background: linear-gradient(135deg, #f2849e 0%, #e03163 50%, #d4af37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
 .gold-glow {
   box-shadow: 0 0 25px var(--gold-subtle-glow);
+}
+
+.cranberry-glow {
+  box-shadow: 0 0 25px var(--cranberry-glow);
 }
 
 .gold-border {
   border: 1px solid var(--gold-border);
 }
 
+.cranberry-border {
+  border: 1px solid rgba(185, 55, 94, 0.35);
+}
+
 /* Glass & Card Effects */
 .glass-panel {
-  background: rgba(18, 20, 28, 0.88);
+  background: rgba(21, 13, 17, 0.88);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border: 1px solid var(--gold-border);
+  border: 1px solid rgba(212, 175, 55, 0.22);
   border-radius: 16px;
 }
 
 .luxury-card {
   background: var(--bg-card);
-  border: 1px solid rgba(212, 175, 55, 0.16);
+  border: 1px solid rgba(212, 175, 55, 0.18);
   border-radius: 16px;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
@@ -132,7 +156,7 @@ body {
   left: 0;
   right: 0;
   height: 2px;
-  background: var(--gold-gradient);
+  background: linear-gradient(90deg, #8b1e3f, #d4af37, #8b1e3f);
   opacity: 0;
   transition: opacity 0.25s ease;
 }
@@ -142,7 +166,7 @@ body {
     transform: translateY(-4px);
     background: var(--bg-card-hover);
     border-color: rgba(212, 175, 55, 0.45);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 20px var(--gold-subtle-glow);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 20px var(--cranberry-glow);
   }
   .luxury-card:hover::before {
     opacity: 1;
@@ -151,6 +175,77 @@ body {
 
 .luxury-card:active {
   transform: scale(0.99);
+}
+
+/* Image Card Styling with luxury overlays */
+.card-img-header {
+  position: relative;
+  width: 100%;
+  height: 190px;
+  overflow: hidden;
+}
+
+.card-img-header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.luxury-card:hover .card-img-header img {
+  transform: scale(1.05);
+}
+
+.card-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(21, 13, 17, 1) 0%, rgba(21, 13, 17, 0.4) 50%, rgba(139, 30, 63, 0.2) 100%);
+}
+
+/* Swipe Indicator Badge & Floating Guide for Mobile */
+.swipe-indicator-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #f2849e;
+  background: rgba(139, 30, 63, 0.25);
+  border: 1px solid rgba(185, 55, 94, 0.4);
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+  letter-spacing: 0.02em;
+  animation: pulseSwipe 2s infinite ease-in-out;
+}
+
+@keyframes pulseSwipe {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+}
+
+.swipe-hint-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  margin-bottom: 0.75rem;
+  background: linear-gradient(90deg, rgba(139, 30, 63, 0.15), rgba(212, 175, 55, 0.15), rgba(139, 30, 63, 0.15));
+  border: 1px dashed rgba(212, 175, 55, 0.35);
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  color: #fce7ef;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .swipe-hint-banner {
+    display: none;
+  }
 }
 
 /* Buttons (Touch Optimized 44px min-height) */
@@ -318,6 +413,18 @@ body {
   text-transform: uppercase;
 }
 
+.badge-cranberry {
+  background: rgba(139, 30, 63, 0.25);
+  border: 1px solid rgba(185, 55, 94, 0.45);
+  color: #fce7ef;
+  font-size: 0.72rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 .badge-dark {
   background: #000;
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -326,6 +433,34 @@ body {
   padding: 0.25rem 0.65rem;
   border-radius: 9999px;
   font-weight: 600;
+}
+
+.btn-cranberry {
+  background: var(--cranberry-gradient);
+  color: #ffffff;
+  font-weight: 600;
+  min-height: 44px;
+  padding: 0.65rem 1.3rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(242, 132, 158, 0.3);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  box-shadow: 0 4px 15px var(--cranberry-glow);
+  font-size: 0.9rem;
+}
+
+.btn-cranberry:hover {
+  filter: brightness(1.15);
+  box-shadow: 0 6px 20px rgba(185, 55, 94, 0.45);
+}
+
+.btn-cranberry:active {
+  transform: scale(0.97);
 }
 
 /* Countdown Unit */
