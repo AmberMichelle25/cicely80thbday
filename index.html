@@ -306,60 +306,53 @@
           </div>
         </div>
 
-        <!-- Family Hub: Cicely's House -->
-        <div class="luxury-card flex flex-col justify-between overflow-hidden">
-          <div class="card-img-header">
-            <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1000&q=80" alt="Cicely's Warm Welcoming Texas Home" loading="lazy" />
-            <div class="card-img-overlay"></div>
-            <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between z-10">
-              <span class="badge-cranberry">Family Gathering Hub</span>
-              <span class="badge-dark text-[10px]"><i data-lucide="heart" class="w-3 h-3 inline mr-1 text-cranberry-400"></i> Home Base</span>
+        <!-- Family Hub: Cicely's House (No photo, icon design) -->
+        <div class="luxury-card p-6 sm:p-8 flex flex-col justify-between border-cranberry-500/30 bg-gradient-to-b from-[#180e14] to-[#120a0e]">
+          <div>
+            <div class="flex items-center justify-between gap-4 mb-5">
+              <div class="w-14 h-14 rounded-2xl bg-cranberry-900/60 border border-cranberry-500/40 flex items-center justify-center text-cranberry-300 shadow-lg shadow-cranberry-900/30">
+                <i data-lucide="home" class="w-7 h-7"></i>
+              </div>
+              <div class="text-right">
+                <span class="badge-cranberry block mb-1">Family Gathering Hub</span>
+                <span class="text-xs text-gold-300 font-semibold">South Arlington, TX</span>
+              </div>
             </div>
-            <div class="absolute bottom-3 left-4 z-10">
-              <span class="text-xs text-gold-300 font-semibold tracking-wider uppercase">South Arlington, TX</span>
+            
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-4">Cicely's House</h3>
+            
+            <div class="space-y-2.5 text-slate-300 text-xs sm:text-sm mb-6">
+              <div class="flex items-start gap-2.5">
+                <i data-lucide="map-pin" class="w-4 h-4 text-cranberry-400 shrink-0 mt-0.5"></i>
+                <div>
+                  <div class="font-medium text-white">222 Quail Trail Lane</div>
+                  <div class="text-slate-400">Arlington, TX 76002 (South Arlington)</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <i data-lucide="users" class="w-4 h-4 text-gold-400 shrink-0"></i>
+                <span>Welcome Base & Family Hangout</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <i data-lucide="heart" class="w-4 h-4 text-cranberry-400 shrink-0"></i>
+                <span>Casual visits, refreshments & catching up</span>
+              </div>
             </div>
+
+            <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">
+              The primary family hospitality home for out-of-town guests arriving in town. Come by to relax, grab refreshments, drop off luggage, and catch up with family throughout the weekend!
+            </p>
           </div>
 
-          <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between gap-4 mb-3">
-                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white">Cicely's House</h3>
-                <span class="badge-gold text-[10px]">South Arlington</span>
-              </div>
-              
-              <div class="space-y-2 text-slate-300 text-xs sm:text-sm mb-5">
-                <div class="flex items-start gap-2.5">
-                  <i data-lucide="home" class="w-4 h-4 text-cranberry-400 shrink-0 mt-0.5"></i>
-                  <div>
-                    <div class="font-medium text-white">222 Quail Trail Lane</div>
-                    <div class="text-slate-400">Arlington, TX 76002</div>
-                  </div>
-                </div>
-                <div class="flex items-center gap-2.5">
-                  <i data-lucide="users" class="w-4 h-4 text-gold-400 shrink-0"></i>
-                  <span>Welcome Base & Family Hangout</span>
-                </div>
-                <div class="flex items-center gap-2.5">
-                  <i data-lucide="coffee" class="w-4 h-4 text-gold-400 shrink-0"></i>
-                  <span>Refreshments, luggage drop-off & hugs</span>
-                </div>
-              </div>
-
-              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">
-                The primary family hospitality house for out-of-town guests arriving in town. Come by to relax, grab refreshments, drop off luggage, and catch up with family throughout the weekend!
-              </p>
-            </div>
-
-            <div class="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-              <a href="https://www.google.com/maps/search/?api=1&query=222+Quail+Trail+Lane+Arlington+TX+76002" target="_blank" rel="noopener" class="btn-gold text-xs sm:text-sm flex-1">
-                <i data-lucide="navigation" class="w-4 h-4"></i>
-                <span>Google Maps to House</span>
-              </a>
-              <button onclick="openTab('travel')" class="btn-ghost text-xs sm:text-sm flex-1">
-                <i data-lucide="plane" class="w-4 h-4"></i>
-                <span>Airport Routes</span>
-              </button>
-            </div>
+          <div class="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+            <a href="https://www.google.com/maps/search/?api=1&query=222+Quail+Trail+Lane+Arlington+TX+76002" target="_blank" rel="noopener" class="btn-gold text-xs sm:text-sm flex-1">
+              <i data-lucide="navigation" class="w-4 h-4"></i>
+              <span>Google Maps to House</span>
+            </a>
+            <button onclick="openTab('travel')" class="btn-ghost text-xs sm:text-sm flex-1">
+              <i data-lucide="plane" class="w-4 h-4"></i>
+              <span>Airport Routes</span>
+            </button>
           </div>
         </div>
 

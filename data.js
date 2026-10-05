@@ -20,7 +20,6 @@ const partyInfo = {
   familyHub: {
     name: "Cicely's House (Family Gathering Hub)",
     address: "222 Quail Trail Lane, Arlington, TX 76002",
-    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1000&q=80",
     mapUrl: "https://www.google.com/maps/search/?api=1&query=222+Quail+Trail+Lane+Arlington+TX+76002",
     description: "The primary hospitality and welcome home base for out-of-town family and friends arriving in Arlington."
   },
