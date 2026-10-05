@@ -452,37 +452,52 @@ function renderShopping() {
   });
 
   grid.innerHTML = filtered.map(shop => `
-    <div class="luxury-card p-5 sm:p-6 flex flex-col justify-between">
-      <div>
-        <div class="flex items-start justify-between gap-2 mb-2">
-          <span class="badge-gold text-[10px]">${shop.city}</span>
-          <span class="text-[10px] text-gold-300 font-semibold">${shop.storesCount}</span>
+    <div class="luxury-card flex flex-col justify-between overflow-hidden">
+      ${shop.image ? `
+        <div class="card-img-header">
+          <img src="${shop.image}" alt="${shop.name}" loading="lazy" />
+          <div class="card-img-overlay"></div>
+          <div class="absolute top-3 left-3 right-3 flex items-center justify-between z-10">
+            <span class="badge-cranberry text-[10px]">${shop.city}</span>
+            <span class="text-[10px] text-gold-300 font-semibold bg-black/60 px-2.5 py-0.5 rounded-full border border-white/10">${shop.storesCount}</span>
+          </div>
+        </div>
+      ` : ''}
+
+      <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
+        <div>
+          ${!shop.image ? `
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <span class="badge-cranberry text-[10px]">${shop.city}</span>
+              <span class="text-[10px] text-gold-300 font-semibold">${shop.storesCount}</span>
+            </div>
+          ` : ''}
+
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-white mb-1 leading-snug">${shop.name}</h3>
+          <div class="text-xs text-gold-400/90 font-medium mb-3">${shop.type}</div>
+
+          <p class="text-xs text-slate-300 mb-3.5 leading-relaxed">${shop.description}</p>
+
+          <div class="p-3 rounded-xl bg-black/40 border border-white/5 text-xs mb-3.5">
+            <div class="font-semibold text-slate-300 mb-1 text-[10px] uppercase tracking-wider">Key Highlights / Anchors:</div>
+            <div class="text-slate-400 text-xs">${shop.anchorStores}</div>
+          </div>
+
+          <div class="flex items-start gap-2 text-xs text-slate-400 mb-4">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-cranberry-400 shrink-0 mt-0.5"></i>
+            <span class="leading-snug">${shop.address}</span>
+          </div>
         </div>
 
-        <h3 class="font-serif text-lg sm:text-xl font-bold text-white mb-1 leading-snug">${shop.name}</h3>
-        <div class="text-xs text-gold-400/90 font-medium mb-3">${shop.type}</div>
-
-        <p class="text-xs text-slate-300 mb-3.5 leading-relaxed">${shop.description}</p>
-
-        <div class="p-3 rounded-xl bg-black/40 border border-white/5 text-xs mb-3.5">
-          <div class="font-semibold text-slate-300 mb-1 text-[10px] uppercase tracking-wider">Key Highlights / Anchors:</div>
-          <div class="text-slate-400 text-xs">${shop.anchorStores}</div>
+        <div class="pt-3 border-t border-white/10 flex items-center justify-between gap-2">
+          <a href="${shop.mapUrl}" target="_blank" rel="noopener" class="btn-ghost text-xs py-1.5 px-3 flex-1 justify-center">
+            <i data-lucide="navigation" class="w-3 h-3"></i> Directions
+          </a>
+          <a href="${shop.website}" target="_blank" rel="noopener" class="btn-gold text-xs py-1.5 px-3 flex-1 justify-center">
+            <span>Website</span>
+            <i data-lucide="external-link" class="w-3 h-3"></i>
+          </a>
         </div>
-
-        <div class="flex items-start gap-2 text-xs text-slate-400 mb-4">
-          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-gold-400 shrink-0 mt-0.5"></i>
-          <span class="leading-snug">${shop.address}</span>
-        </div>
-      </div>
-
-      <div class="pt-3 border-t border-white/10 flex items-center justify-between gap-2">
-        <a href="${shop.mapUrl}" target="_blank" rel="noopener" class="btn-ghost text-xs py-1.5 px-3 flex-1 justify-center">
-          <i data-lucide="navigation" class="w-3 h-3"></i> Directions
-        </a>
-        <a href="${shop.website}" target="_blank" rel="noopener" class="btn-gold text-xs py-1.5 px-3 flex-1 justify-center">
-          <span>Website</span>
-          <i data-lucide="external-link" class="w-3 h-3"></i>
-        </a>
       </div>
     </div>
   `).join('');
