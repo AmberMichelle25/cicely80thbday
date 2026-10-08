@@ -15,7 +15,7 @@ const state = {
 document.addEventListener('DOMContentLoaded', () => {
   // Sync tab from URL hash if present
   const hash = window.location.hash.replace('#', '');
-  if (['party', 'lodging', 'travel', 'restaurants', 'entertainment', 'shopping'].includes(hash)) {
+  if (['party', 'gifts', 'lodging', 'travel', 'restaurants', 'entertainment', 'shopping'].includes(hash)) {
     state.activeTab = hash;
   }
   
@@ -539,4 +539,59 @@ END:VCALENDAR`;
   a.click();
   document.body.removeChild(a);
   window.URL.revokeObjectURL(url);
+}
+
+/* ========================================================
+   CLIPBOARD & QUICK COPY HELPER
+   ======================================================== */
+function copyToClipboard(text, label = 'Copied to clipboard!') {
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(() => {
+      showToast(label);
+    }).catch(() => {
+      fallbackCopy(text, label);
+    });
+  } else {
+    fallbackCopy(text, label);
+  }
+}
+
+function fallbackCopy(text, label) {
+  const textArea = document.createElement("textarea");
+  textArea.value = text;
+  textArea.style.position = "fixed";
+  textArea.style.left = "-999999px";
+  textArea.style.top = "-999999px";
+  document.body.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
+  try {
+    document.execCommand('copy');
+    showToast(label);
+  } catch (err) {
+    console.error('Unable to copy', err);
+  }
+  document.body.removeChild(textArea);
+}
+
+function showToast(message) {
+  let toast = document.getElementById('quickToast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'quickToast';
+    toast.className = 'fixed bottom-20 sm:bottom-8 left-1/2 -translate-x-1/2 z-50 bg-[#1c0d15] text-gold-300 border border-gold-500/50 shadow-2xl px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold flex items-center gap-2 transition-all duration-300 opacity-0 pointer-events-none transform translate-y-4';
+    document.body.appendChild(toast);
+  }
+  
+  toast.innerHTML = `<i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> <span>${message}</span>`;
+  initLucide();
+
+  // Trigger animation
+  toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+  toast.classList.add('opacity-100', 'translate-y-0');
+
+  setTimeout(() => {
+    toast.classList.remove('opacity-100', 'translate-y-0');
+    toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+  }, 2400);
 }

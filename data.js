@@ -48,7 +48,54 @@ const partyInfo = {
       image: "https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?auto=format&fit=crop&w=800&q=80",
       notes: "Hug Cicely goodbye, enjoy coffee and breakfast treats, and capture group family photos before departing."
     }
-  ]
+  ],
+  gifts: {
+    title: "Gift Ideas for Cicely",
+    subtitle: "Celebrating 80 Wonderful Years",
+    note: "Your presence and love are the greatest gifts! If you would like to honor Cicely with a token of celebration, here are her preferred gift options, electronic registries, and mailing address:",
+    mailingAddress: {
+      recipient: "Cicely Nedd-Thomas",
+      street: "222 Quail Trail Lane",
+      cityStateZip: "Arlington, TX 76002",
+      fullAddress: "222 Quail Trail Lane, Arlington, TX 76002"
+    },
+    zelle: {
+      name: "Cicely Nedd-Thomas",
+      registeredAs: "CICELY NEDD-THOMAS",
+      phone: "(214) 215-8869",
+      phoneRaw: "2142158869"
+    },
+    cashApp: {
+      handle: "$CicelyNeddThomas",
+      url: "https://cash.app/$CicelyNeddThomas"
+    },
+    giftCards: [
+      {
+        store: "Macy's",
+        category: "Department Store & Fashion",
+        icon: "star",
+        color: "#e11a2b",
+        url: "https://www.macys.com/shop/gift-cards",
+        description: "Cicely's favorite for classic fashion, beauty & home essentials"
+      },
+      {
+        store: "Dillard's",
+        category: "Department Store & Style",
+        icon: "gem",
+        color: "#c8a45d",
+        url: "https://www.dillards.com/c/gift-cards",
+        description: "The Style of Your Life — luxury clothing, accessories & shoes"
+      },
+      {
+        store: "Amazon",
+        category: "Online & Home",
+        icon: "shopping-cart",
+        color: "#ff9900",
+        url: "https://www.amazon.com/gift-cards",
+        description: "Universal gifts, electronics, books & household comforts"
+      }
+    ]
+  }
 };
 
 const airportRoutes = [
