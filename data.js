@@ -59,6 +59,7 @@ const partyInfo = {
       cityStateZip: "Arlington, TX 76002",
       fullAddress: "222 Quail Trail Lane, Arlington, TX 76002"
     },
+    email: "cthomasesq@aol.com",
     zelle: {
       name: "Cicely Nedd-Thomas",
       registeredAs: "CICELY NEDD-THOMAS",

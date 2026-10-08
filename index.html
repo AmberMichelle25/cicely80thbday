@@ -605,9 +605,25 @@
             </div>
 
             <h3 class="font-serif text-xl sm:text-2xl font-bold text-white mb-2">Gift Cards From</h3>
-            <p class="text-xs text-slate-400 mb-5 leading-relaxed">
+            <p class="text-xs text-slate-400 mb-4 leading-relaxed">
               Select an amount directly to send an e-gift card or mail a physical card to Cicely:
             </p>
+
+            <!-- Recipient Email Box for eGifts -->
+            <div class="p-3.5 mb-4 rounded-xl bg-gradient-to-r from-cranberry-950/60 to-black/80 border border-cranberry-500/40 flex items-center justify-between gap-3 shadow-inner">
+              <div class="flex items-center gap-2.5 min-w-0">
+                <div class="w-8 h-8 rounded-lg bg-cranberry-900/80 border border-cranberry-500/40 flex items-center justify-center text-gold-300 shrink-0">
+                  <i data-lucide="mail" class="w-4 h-4"></i>
+                </div>
+                <div class="min-w-0">
+                  <div class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Recipient Email for eGifts</div>
+                  <div class="text-xs sm:text-sm font-mono font-bold text-gold-300 truncate">cthomasesq@aol.com</div>
+                </div>
+              </div>
+              <button onclick="copyToClipboard('cthomasesq@aol.com', 'Recipient email copied!')" class="shrink-0 text-xs text-gold-300 hover:text-white bg-black/60 hover:bg-cranberry-900/70 px-2.5 py-1.5 rounded-lg border border-gold-500/30 flex items-center gap-1.5 font-semibold transition">
+                <i data-lucide="copy" class="w-3.5 h-3.5"></i> <span>Copy</span>
+              </button>
+            </div>
 
             <div class="space-y-3.5 mb-4">
               <!-- Macy's Card -->
@@ -688,7 +704,7 @@
           </div>
 
           <div class="pt-4 border-t border-white/10 text-center">
-            <span class="text-[11px] text-slate-400">Digital cards can be sent or delivered to Cicely's address</span>
+            <span class="text-[11px] text-slate-400">For eGifts, send to <strong class="text-gold-300 font-mono">cthomasesq@aol.com</strong></span>
           </div>
         </div>
 
