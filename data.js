@@ -75,7 +75,7 @@ const partyInfo = {
         category: "Department Store & Fashion",
         icon: "star",
         color: "#e11a2b",
-        url: "https://www.macys.com/shop/gift-cards?cm_sp=navigation-_-top_nav-_-gift_cards",
+        url: "https://www.macys.com",
         description: "Cicely's favorite for classic fashion, beauty & home essentials"
       },
       {
@@ -83,7 +83,7 @@ const partyInfo = {
         category: "Department Store & Style",
         icon: "gem",
         color: "#c8a45d",
-        url: "https://www.dillards.com/c/gift-cards",
+        url: "https://www.dillards.com",
         description: "The Style of Your Life — luxury clothing, accessories & shoes"
       },
       {
@@ -91,8 +91,8 @@ const partyInfo = {
         category: "Online & Home",
         icon: "shopping-cart",
         color: "#ff9900",
-        url: "https://www.amazon.com/dp/B0BNWLSQDD?th=1",
-        description: "Select an amount ($25, $50, $100+) & deliver directly via email or mail"
+        url: "https://www.amazon.com",
+        description: "Everything from books and home essentials to everyday favorites"
       }
     ]
   }
