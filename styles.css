@@ -616,16 +616,26 @@ body {
   left: 0;
   right: 0;
   z-index: 50;
-  background: rgba(9, 10, 15, 0.94);
+  background: rgba(10, 6, 8, 0.96);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-top: 1px solid rgba(212, 175, 55, 0.25);
-  padding: 0.6rem 1rem calc(0.6rem + env(safe-area-inset-bottom, 0px));
+  border-top: 1px solid rgba(185, 55, 94, 0.35);
+  padding: 0.5rem 0.6rem calc(0.5rem + env(safe-area-inset-bottom, 0px));
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0.75rem;
-  box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.6);
+  gap: 0.4rem;
+  box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.8);
+}
+
+.mobile-bottom-bar .btn-gold,
+.mobile-bottom-bar .btn-cranberry,
+.mobile-bottom-bar .btn-outline-gold,
+.mobile-bottom-bar .btn-ghost {
+  min-height: 38px;
+  padding: 0.45rem 0.5rem;
+  font-size: 0.78rem;
+  white-space: nowrap;
 }
 
 @media (min-width: 768px) {
