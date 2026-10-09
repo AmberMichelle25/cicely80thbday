@@ -36,6 +36,7 @@ const partyInfo = {
       time: "6:30 PM – 10:30 PM",
       title: "Cicely's 80th Birthday Celebration",
       location: "The White Room • 2227 W Park Row Dr, Pantego, TX",
+      details: "Open Bar Included",
       image: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80"
     },
     {
