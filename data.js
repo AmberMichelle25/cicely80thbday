@@ -39,6 +39,14 @@ const partyInfo = {
       location: "The White Room • 2227 W Park Row Dr, Pantego, TX",
       image: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80",
       notes: "Dinner, dancing, champagne toasts, tribute speeches, and celebrating Cicely. Attire: Dress to Impress in ALL BLACK."
+    },
+    {
+      day: "Sunday Afternoon, Oct 11",
+      time: "4:00 PM",
+      title: "Sunday Family Dinner",
+      location: "Cicely's House • 222 Quail Trail Lane",
+      image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80",
+      notes: "Join us for a warm family dinner at Cicely's home to enjoy good food, share laughs and memories, and continue the weekend celebration."
     }
   ],
   gifts: {
