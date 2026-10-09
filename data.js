@@ -39,14 +39,6 @@ const partyInfo = {
       location: "The White Room • 2227 W Park Row Dr, Pantego, TX",
       image: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80",
       notes: "Dinner, dancing, champagne toasts, tribute speeches, and celebrating Cicely. Attire: Dress to Impress in ALL BLACK."
-    },
-    {
-      day: "Sunday Morning, Oct 11",
-      time: "10:30 AM – 1:30 PM",
-      title: "Farewell Family Brunch & Photos",
-      location: "Cicely's House / Recommended Local Brunch",
-      image: "https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?auto=format&fit=crop&w=800&q=80",
-      notes: "Hug Cicely goodbye, enjoy coffee and breakfast treats, and capture group family photos before departing."
     }
   ],
   gifts: {
