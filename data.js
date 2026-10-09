@@ -26,8 +26,8 @@ const partyInfo = {
   itinerary: [
     {
       day: "Friday Evening, Oct 9",
-      time: "6:00 PM – 9:00 PM",
-      title: "Family Welcome & Meet & Greet",
+      time: "7:00 PM – 10:00 PM",
+      title: "Family Welcome",
       location: "Cicely's House • 222 Quail Trail Lane",
       image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80",
       notes: "Casual gathering, welcome cocktails, Texas refreshments, and catching up as out-of-town guests arrive."
