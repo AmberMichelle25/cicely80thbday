@@ -29,24 +29,21 @@ const partyInfo = {
       time: "7:00 PM – 10:00 PM",
       title: "Family Welcome",
       location: "Cicely's House • 222 Quail Trail Lane",
-      image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80",
-      notes: "Casual gathering, welcome cocktails, Texas refreshments, and catching up as out-of-town guests arrive."
+      image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80"
     },
     {
       day: "Saturday Evening, Oct 10 (Main Event)",
       time: "6:30 PM – 10:30 PM",
       title: "Cicely's 80th Birthday Celebration",
       location: "The White Room • 2227 W Park Row Dr, Pantego, TX",
-      image: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80",
-      notes: "Dinner, dancing, champagne toasts, tribute speeches, and celebrating Cicely. Attire: Dress to Impress in ALL BLACK."
+      image: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80"
     },
     {
       day: "Sunday Afternoon, Oct 11",
       time: "4:00 PM",
       title: "Sunday Family Dinner",
       location: "Cicely's House • 222 Quail Trail Lane",
-      image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80",
-      notes: "Join us for a warm family dinner at Cicely's home to enjoy good food, share laughs and memories, and continue the weekend celebration."
+      image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80"
     }
   ],
   gifts: {
